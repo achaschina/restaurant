@@ -1,39 +1,21 @@
 <template>
-  <div id="app">
-    <b-jumbotron :header="msg" lead="Рабочий кабинет ресторана">
-      <p>Для просмотра детальной информации войдите в личный кабинет</p>
-      <b-btn variant="secondary" href="#">Войти</b-btn>
-    </b-jumbotron>
+  <div id="main">
+    <app-header></app-header>
+    <router-view></router-view>
+    <!-- <app-footer></app-footer> -->
   </div>
 </template>
 
 <script>
+import appHeader from "./components/Layout/Header.vue";
+import appFooter from "./components/Layout/Footer.vue";
 export default {
-  name: "app",
-  data() {
-    return {
-      msg: "Имя ресторана"
-    };
+  components: {
+    appHeader,
+    appFooter
   }
 };
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 2rem;
-}
-.btn-secondary.focus, .btn-secondary:focus {
-  box-shadow: none !important;
-}
-
-.display-3 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1;
-}
 </style>
