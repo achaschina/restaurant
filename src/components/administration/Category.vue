@@ -1,6 +1,6 @@
 <template>
     <h2>
-        its login component
+        Категории
     </h2>
 </template>
 

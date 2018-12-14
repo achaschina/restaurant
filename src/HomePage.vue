@@ -1,9 +1,17 @@
 <template>
   <div>
-    <b-jumbotron id="home-page" :header="msg" lead="Рабочий кабинет ресторана">
-      <p>Для просмотра детальной информации войдите в личный кабинет</p>
-      <b-btn variant="secondary" to="/tables">Столы</b-btn>
-      <b-btn variant="secondary" to="/menu">Меню</b-btn>
+    <b-jumbotron id="home-page" :header="msg" lead>
+      <p>Для просмотра детальной информации по заказу войдите в личный кабинет</p>
+      <b-btn variant="secondary" to="/category">Категории</b-btn>
+      <carousel :perPage=1 :autoplay="true">
+        <slide>Slide 1 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 2 Content</slide>
+      </carousel>
     </b-jumbotron>
   </div>
 </template>
@@ -13,13 +21,11 @@ export default {
   name: "app",
   data() {
     return {
-      msg: "Имя ресторана"
+      msg: "Категории товаров"
     };
   }
 };
 </script>
 
 <style scoped>
-
-
 </style>

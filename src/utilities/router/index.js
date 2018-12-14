@@ -1,11 +1,11 @@
 import HomePage from '../../HomePage.vue'
-import LoginPage from '../../components/administration/Login.vue'
-import TablesPage from '../../components/tables/Tables.vue'
-import MenuPage from '../../components/menu/Menu.vue'
+import CategoryPage from '../../components/administration/Category.vue'
+import ItemPage from '../../components/tables/Item.vue'
+import CartPage from '../../components/menu/Cart.vue'
 
 export default [
 	{ path: '/', component: HomePage},
-	{ path: '/login', component: LoginPage },
-	{ path: '/tables', component: TablesPage },
-	{ path: '/menu', component: MenuPage },
+	{ path: '/category', component: CategoryPage },
+	{ path: '/item', component: ItemPage },
+	{ path: '/cart', component: CartPage },
 ]
