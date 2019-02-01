@@ -31,6 +31,14 @@ const data = {
         {id: '5', name: 'Сендвіч', parentId: '12', price: 33},
         {id: '6', name: 'Шоколад', parentId: '15', price: 26},
         {id: '8', name: 'Морозиво', parentId: '16', price: 15},
+    ],
+    bills: [
+        {number: '154', date: Date('20.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '155', date: Date('21.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '156', date: Date('22.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '157', date: Date('23.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '158', date: Date('24.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '159', date: Date('25.12.12'), barista: 'Ivan', summ: '156', },
     ]
 }
 

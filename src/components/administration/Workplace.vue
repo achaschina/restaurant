@@ -23,14 +23,14 @@
         </b-row>
         <b-row class="main-row">
           <b-col cols="2">
-            <transition-group name="fade">
+            <!-- <transition-group name="fade"> -->
               <div
                 class="custom-button"
                 v-for="(element, index) in categoryList"
                 v-bind:key="index"
                 @click="getCategory(element)"
               >{{element.name}}</div>
-            </transition-group>
+            <!-- </transition-group> -->
           </b-col>
           <b-col cols="10">
             <div class="b-row tab-row">
@@ -53,7 +53,7 @@
             </div>
             <div class="b-row items-row">
               <div class="total">Загальна сума:{{total}}</div>
-              <transition-group name="fade">
+              <!-- <transition-group name="fade"> -->
                 <div
                   class="custom-button items"
                   v-for="(el, i) in itemsList"
@@ -62,7 +62,7 @@
                 >
                   <div>{{el.name}}</div>
                 </div>
-              </transition-group>
+              <!-- </transition-group> -->
             </div>
           </b-col>
         </b-row>
@@ -172,6 +172,9 @@ export default {
     },
     printBill() {
       window.print();
+      testData.bills.push(
+        {number: '160', date: new Date, barista: 'Ivan', summ: this.total, },
+      );
     },
     setActiveStr(currentItem) {
       this.tabItems.map(el => {
@@ -203,12 +206,13 @@ export default {
     },
     getCategory(category) {
       if (category.childs.length > 0) {
-        this.categoryList = category.childs;
-      } else {
+         this.categoryList = category.childs;
+      } 
+      // else {
         this.itemsList = testData.items.filter(item => {
           return item.parentId === category.id;
         });
-      }
+      // }
     },
     returnCategory() {
       let parentId = this.categoryList[0].parentId;
@@ -244,44 +248,6 @@ export default {
           }
         }
       }
-      // let that = this;
-      // let parentId = this.categoryList[0].parentId;
-      // let parent = findCategory(testData.category);
-
-      // // setTimeout(()=> {
-      //   console.log(parent.name)
-      // }, 100)
-      // console.log(testData.category)
-      // let parent = testData.category.find((element) => {
-      //   console.log(element.id)
-      //   return element.id === this.categoryList[0].parentId
-      // })
-      // console.log(parent, this.categoryList[0].parentId)
-      // if (parent.parentId === '') {
-      //   this.categoryList = testData.category;
-      // }
-
-      // function findCategory(arr) {
-      //   let founde;
-      //   for (let i = 0; i < arr.length; i++) {
-      //     const element = arr[i];
-      //     // if (arr.length === 0) return;
-      //     console.log(element.name, i)
-      //     console.log(arr)
-
-      //     if (parentId === element.id) {
-      //       founde = element;
-      //       console.log('find!!!!!', element.name, parentId)
-      //       // return element;
-      //       // break
-
-      //     } else {
-      //       findCategory(element.childs);
-      //       // return element;
-      //     }
-      //     return founde;
-      //   }
-      // }
     }
   },
   mounted() {
