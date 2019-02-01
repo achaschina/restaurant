@@ -3,12 +3,11 @@
     <b-navbar toggleable="md" type="dark" variant="info">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand to="/">NavBar</b-navbar-brand>
+      <b-navbar-brand to="/"><img src="../../assets/logo.png" style="height:30px;"></b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item to="/category">Категории</b-nav-item>
-          <b-nav-item href="#">Дизайнеры</b-nav-item>
+          <b-nav-item to="/workplace">Продаж</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -46,7 +45,7 @@ export default {};
 
 <style scoped>
 .navbar {
-  background: #94b0b7;
+  background: #94b0b7 !important;
 }
 .form-control-sm, .btn-sm {
   border-radius: 0rem;

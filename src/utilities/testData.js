@@ -7,20 +7,30 @@ const data = {
         {name: 5, url: './assets/5a.jpeg'},
     ],
     category: [
-        {id: '1', name: 'Одежда', parentId: ''},
-        {id: '2', name: 'Одежда для женщин', parentId: '1', pic:'wc.JPG'},
-        {id: '7', name: 'Одежда для мужчин', parentId: '1', pic:'mc.JPG'},
-        {id: '3', name: 'Одежда для детей', parentId: '1', pic:'chc.JPG'},
-        {id: '4', name: 'Обувь', parentId: '', pic:''},
-        {id: '5', name: 'Обувь для женщин', parentId: '4', pic:'ws.JPG'},
-        {id: '6', name: 'Обувь для мужчин', parentId: '4', pic:'ms.JPG'},
-        {id: '8', name: 'Обувь для детей', parentId: '4', pic:'chs.JPG'},
+        {id: '1', name: 'Гарячі напої', parentId: '', childs: [
+            {id: '9', name: 'Кава', parentId: '1', childs:[
+                {id: '22', name: 'Чорна кава', parentId: '9', childs:[]},
+            ]},
+            {id: '10', name: 'Чай', parentId: '1', childs:[]},
+        ]},
+
+        {id: '4', name: 'Смаколики', parentId: '', childs: [
+            {id: '11', name: 'Десерти', parentId: '4', childs:[
+                {id: '15', name: 'Торти', parentId: '11', childs:[]},
+                {id: '16', name: 'Морозиво', parentId: '11', childs:[]},
+            ]},
+            {id: '12', name: 'Бургери', parentId: '4', childs:[]},
+        ]},
     ],
     items: [
-        {name: 'Платье', discription: 'Очень хорошее и красивое платье', foto: ['', '', ''], parentId: '2', brand: ''},
-        {name: 'Платье', discription: 'Очень хорошее и красивое платье', foto: ['', '', ''], parentId: '2'},
-        {name: 'Платье', discription: 'Очень хорошее и красивое платье', foto: ['', '', ''], parentId: '2'},
-        {name: 'Платье', discription: 'Очень хорошее и красивое платье', foto: ['', '', ''], parentId: '2'}
+        {id: '2', name: 'Лате', parentId: '9', price: 25},
+        {id: '7', name: 'Американо', parentId: '9', price: 35},
+        {id: '3', name: 'Еспрессо', parentId: '9', price: 37},
+        {id: '14', name: 'Зелений чай', parentId: '10', price: 37},
+        {id: '13', name: 'Чорний чай', parentId: '10', price: 37},
+        {id: '5', name: 'Сендвіч', parentId: '12', price: 33},
+        {id: '6', name: 'Шоколад', parentId: '15', price: 26},
+        {id: '8', name: 'Морозиво', parentId: '16', price: 15},
     ]
 }
 
