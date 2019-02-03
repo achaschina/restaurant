@@ -33,12 +33,12 @@ const data = {
         {id: '8', name: 'Морозиво', parentId: '16', price: 15},
     ],
     bills: [
-        {number: '154', date: Date('20.12.12'), barista: 'Ivan', summ: '156', },
-        {number: '155', date: Date('21.12.12'), barista: 'Ivan', summ: '156', },
-        {number: '156', date: Date('22.12.12'), barista: 'Ivan', summ: '156', },
-        {number: '157', date: Date('23.12.12'), barista: 'Ivan', summ: '156', },
-        {number: '158', date: Date('24.12.12'), barista: 'Ivan', summ: '156', },
-        {number: '159', date: Date('25.12.12'), barista: 'Ivan', summ: '156', },
+        {number: '154', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
+        {number: '155', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
+        {number: '156', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
+        {number: '157', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
+        {number: '158', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
+        {number: '159', date: Date(2018, 11, 31), barista: 'Ivan', summ: '156', },
     ]
 }
 

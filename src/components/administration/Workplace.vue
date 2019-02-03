@@ -175,6 +175,7 @@ export default {
       testData.bills.push(
         {number: '160', date: new Date, barista: 'Ivan', summ: this.total, },
       );
+      console.log(testData.bills)
     },
     setActiveStr(currentItem) {
       this.tabItems.map(el => {

@@ -8,6 +8,7 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/workplace">Продаж</b-nav-item>
+          <b-nav-item to="/diagram">Графіки</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
